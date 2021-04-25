@@ -7,7 +7,7 @@ pipeline{
    stage('Build'){
       steps {
         script {
-                           def mvnHome = tool 'Maven 10.15.7'
+                           def mvnHome = tool 'Maven 3.5.2'
                            if (isUnix()) {
 
                                sh "'${mvnHome}/bin/mvn'  clean install -Dunit-tests.skip=true"
